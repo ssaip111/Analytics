@@ -1,7 +1,5 @@
-# Unit 5 - Recitation
+#  Recitation
 
-
-# Video 2
 
 # Load the dataset
 
@@ -21,9 +19,6 @@ emails$responsive[2]
 
 table(emails$responsive)
 
-
-
-# Video 3
 
 
 # Load tm package
@@ -55,9 +50,6 @@ corpus = tm_map(corpus, stemDocument)
 corpus[[1]]
 
 
-
-# Video 4
-
 # Create matrix
 
 dtm = DocumentTermMatrix(corpus)
@@ -74,10 +66,6 @@ labeledTerms = as.data.frame(as.matrix(dtm))
 labeledTerms$responsive = emails$responsive
 
 str(labeledTerms)
-
-
-
-# Video 5
 
 
 # Split the data
@@ -102,8 +90,6 @@ prp(emailCART)
 
 
 
-# Video 6
-
 # Make predictions on the test set
 
 pred = predict(emailCART, newdata=test)
@@ -121,9 +107,6 @@ table(test$responsive, pred.prob >= 0.5)
 table(test$responsive)
 215/(215+42)
 
-
-
-# Video 7
 
 # ROC curve
 
