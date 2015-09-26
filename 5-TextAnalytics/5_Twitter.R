@@ -1,8 +1,5 @@
 # Unit 5 - Twitter
 
-
-# VIDEO 5
-
 # Read in the data
 
 tweets = read.csv("tweets.csv", stringsAsFactors=FALSE)
@@ -69,9 +66,6 @@ corpus[[1]]
 
 
 
-
-# Video 6
-
 # Create matrix
 
 frequencies = DocumentTermMatrix(corpus)
@@ -113,10 +107,6 @@ split = sample.split(tweetsSparse$Negative, SplitRatio = 0.7)
 
 trainSparse = subset(tweetsSparse, split==TRUE)
 testSparse = subset(tweetsSparse, split==FALSE)
-
-
-
-# Video 7
 
 # Build a CART model
 
